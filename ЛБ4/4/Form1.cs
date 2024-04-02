@@ -150,10 +150,10 @@ namespace _4
         {
             int[,] array = Create2DArray();
 
-            int row1 = 0; // Встановлено за умовою
-            int row2 = 1; // Встановлено за умовою
-            int column1 = int.Parse(textBox4.Text); // Введення користувача
-            int column2 = int.Parse(textBox5.Text); // Введення користувача
+            int row1 = 0;
+            int row2 = 1;
+            int column1 = int.Parse(textBox4.Text);
+            int column2 = int.Parse(textBox5.Text);
 
             double difference = CalculateDifference(array, row1, column1, row2, column2);
             double geometricMean = CalculateGeometricMean(array, row1, column1, row2, column2);
@@ -166,15 +166,15 @@ namespace _4
             string[] row2Elements = textBox3.Text.Split(',');
 
             int maxLength = Math.Max(row1Elements.Length, row2Elements.Length);
-            int[,] array = new int[2, maxLength + 1]; // Збільшуємо розмір масиву на одиницю
+            int[,] array = new int[2, maxLength + 1];
 
             for (int i = 0; i < maxLength; i++)
             {
                 if (i < row1Elements.Length)
-                    array[0, i + 1] = int.Parse(row1Elements[i]); // Починаємо з індексу 1
+                    array[0, i + 1] = int.Parse(row1Elements[i]);
 
                 if (i < row2Elements.Length)
-                    array[1, i + 1] = int.Parse(row2Elements[i]); // Починаємо з індексу 1
+                    array[1, i + 1] = int.Parse(row2Elements[i]);
             }
 
             return array;
